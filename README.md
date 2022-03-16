@@ -4,19 +4,21 @@
 
 The FDA launched its openFDA project in 2014, which provides the public with access to APIs and raw datasets of adverse events, drug product labeling and recall enforcement reports in several areas. 
 
-Each year, the FDA receives several hundred thousand medical device reports (MDRs) of suspected device-associated deaths, serious injuries and malfunctions. The FDA uses MDRs to monitor device performance, detect potential device-related safety issues, and contribute to benefit-risk assessments of these products.In this project I have pulled all the adverse events data relevant to Straumann. 
+Each year, the FDA receives several hundred thousand medical device reports (MDRs) of suspected device-associated deaths, serious injuries and malfunctions. The FDA uses MDRs to monitor device performance, detect potential device-related safety issues, and contribute to benefit-risk assessments of these products. 
+
+In this project I have pulled all the adverse events data relevant to Straumann. 
 
 **The following steps were performed:**
 
-1.	Download adverse events data from openFDA via API 
-2.	Data cleaning and transformation using Python
-3.	Uploaded the data to internal Postgres database
-4.	Access and host data with SAP Data Warehouse Cloud - available to all Straumann employees
-5.	Created SAP Analytics Cloud Dashboard – can be used as template for future dashboards/visualizations
+**1.**	    Download adverse events data from openFDA via API 
+**2.**	    Data cleaning and transformation using Python
+**3.**	    Uploaded the data to internal Postgres database
+**4.**	    Access and host data with SAP Data Warehouse Cloud - available to all Straumann employees
+**5.**	    Created SAP Analytics Cloud Dashboard – can be used as template for future dashboards/visualizations
 
 ### 1.  Download adverse event data from openFDA
 
-#### **openFDA API overview:**
+#### **OpenFDA API Overview:**
 
 The openFDA API is a program hosted by the website. They provide the consumer with a method to GET data in a structured format, in this case a JSON is returned. 
 
@@ -26,7 +28,8 @@ Link to datasource:
 **API call specifications:**
 - Time Frame: 1991 – Current (2022 Q1)
 - Refresh Rate: Quarterly
-- **The FDA API has the following limitations:**
+
+**The FDA API has the following limitations:**
 - 120,000 calls/day 
 - 1,000 results/call
 
@@ -35,8 +38,13 @@ To make these calls, you can either manually put the URL in the URL address bar 
 
 Example: ![openFDA API call](/assets/images/ApiCllExample.svg)
 
+#### **Python Scripting:**
 
+Due to the size of the result set, I wrote a python script to automatically call the API until the end of the results were reached.  
+I set the search term to the following:
 
+Device report product code = 
+- DZA, DZE, DZM EBW, EFA, EGS, EHZ, EIS, EJB, EJI, ELR, EMM, KCT, NDP, NHA, NXC, EJL-BUR, EML, FSM, DZN, LYS, EIF, DZL, OAT
 
 
 
