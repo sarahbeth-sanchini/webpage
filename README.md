@@ -23,14 +23,12 @@ The openFDA API is a program hosted by the website. They provide the consumer wi
 Link to datasource:             
 [openFDA_database](https://open.fda.gov/apis/device/event/download/)
 
-API call specifications:
+**API call specifications:**
 - Time Frame: 1991 – Current (2022 Q1)
 - Refresh Rate: Quarterly
-- The FDA API has the following limitations:
+- **The FDA API has the following limitations:**
 - 120,000 calls/day 
 - 1,000 results/call
-
-
 
 
 To make these calls, you can either manually put the URL in the URL address bar in your browser or in this case write a script to do it automatically. 
