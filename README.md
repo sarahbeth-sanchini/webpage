@@ -33,7 +33,7 @@ Link to datasource:
 
 To make these calls, you can either manually put the URL in the URL address bar in your browser or in this case write a script to do it automatically. 
 
-Example: ![openFDA API call]
+Example: ![openFDA API call](/assets/images/ApiCllExample.svg)
 
 
 
