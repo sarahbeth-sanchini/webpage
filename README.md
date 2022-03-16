@@ -4,8 +4,9 @@
 
 The FDA launched its openFDA project in 2014, which provides the public with access to APIs and raw datasets of adverse events, drug product labeling and recall enforcement reports in several areas. 
 
-Each year, the FDA receives several hundred thousand medical device reports (MDRs) of suspected device-associated deaths, serious injuries and malfunctions. The FDA uses MDRs to monitor device performance, detect potential device-related safety issues, and contribute to benefit-risk assessments of these products.
-In this project I have pulled all the adverse events data relevant to Straumann and performed the following steps:
+Each year, the FDA receives several hundred thousand medical device reports (MDRs) of suspected device-associated deaths, serious injuries and malfunctions. The FDA uses MDRs to monitor device performance, detect potential device-related safety issues, and contribute to benefit-risk assessments of these products.In this project I have pulled all the adverse events data relevant to Straumann. 
+
+**The following steps were performed:**
 
 1.	Download adverse events data from openFDA via API 
 2.	Data cleaning and transformation using Python
@@ -15,18 +16,22 @@ In this project I have pulled all the adverse events data relevant to Straumann 
 
 ### 1.  Download adverse event data from openFDA
 
-##### openFDA API overview:
+#### **openFDA API overview:**
 
 The openFDA API is a program hosted by the website. They provide the consumer with a method to GET data in a structured format, in this case a JSON is returned. 
 
-Link to datasource:   [openFDA_database](https://open.fda.gov/apis/device/event/download/)
+Link to datasource:             
+[openFDA_database](https://open.fda.gov/apis/device/event/download/)
 
-        Time Frame: 1991 – Current (2022 Q1)
-        Refresh Rate: Quarterly
+API call specifications:
+- Time Frame: 1991 – Current (2022 Q1)
+- Refresh Rate: Quarterly
+- The FDA API has the following limitations:
+- 120,000 calls/day 
+- 1,000 results/call
 
-The FDA API has the following limitations:
-120,000 calls/day 
-1,000 results/call
+
+
 
 To make these calls, you can either manually put the URL in the URL address bar in your browser or in this case write a script to do it automatically. 
 
