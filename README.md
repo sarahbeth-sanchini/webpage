@@ -46,6 +46,9 @@ I set the search term to the following:
 Device report product code = 
 - DZA, DZE, DZM EBW, EFA, EGS, EHZ, EIS, EJB, EJI, ELR, EMM, KCT, NDP, NHA, NXC, EJL-BUR, EML, FSM, DZN, LYS, EIF, DZL, OAT
 
+**Result size (March 2022):**	 1,012,185
+**Number of API calls:**	1,012
+
 
 
 
