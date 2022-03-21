@@ -11,9 +11,13 @@ In this project I have pulled all the adverse events data relevant to Straumann.
 **The following steps were performed:**
 
 **1.**	    Download adverse events data from openFDA via API 
+
 **2.**	    Data cleaning and transformation using Python
+
 **3.**	    Uploaded the data to internal Postgres database
+
 **4.**	    Access and host data with SAP Data Warehouse Cloud - available to all Straumann employees
+
 **5.**	    Created SAP Analytics Cloud Dashboard – can be used as template for future dashboards/visualizations
 
 ### 1.  Download adverse event data from openFDA
